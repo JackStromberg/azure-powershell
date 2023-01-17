@@ -1,0 +1,123 @@
+{
+  "Update-AzContainerRegistryReplication+[NoContext]+Update+$PUT+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "PUT",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003?api-version=2022-02-01-preview",
+      "Content": "{\r\n  \"location\": \"west us\"\r\n}",
+      "isContentBase64": false,
+      "Headers": {
+      },
+      "ContentHeaders": {
+        "Content-Type": [ "application/json" ],
+        "Content-Length": [ "29" ]
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2020-11-01-preview, 2021-06-01-preview, 2021-08-01-preview, 2021-09-01, 2021-12-01-preview, 2022-02-01-preview, 2022-12-01" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1195" ],
+        "x-ms-request-id": [ "33e2cf7c-9da9-428e-99db-0596463d3c22" ],
+        "x-ms-correlation-request-id": [ "33e2cf7c-9da9-428e-99db-0596463d3c22" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T213023Z:33e2cf7c-9da9-428e-99db-0596463d3c22" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:30:22 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "714" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"type\":\"Microsoft.ContainerRegistry/registries/replications\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003\",\"name\":\"replication003\",\"location\":\"westus\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T21:13:51.281896+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:30:22.3319362+00:00\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"status\":{\"displayStatus\":\"Ready\",\"timestamp\":\"2023-01-16T21:14:02.1073709Z\"},\"regionEndpointEnabled\":true,\"zoneRedundancy\":\"Disabled\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Update-AzContainerRegistryReplication+[NoContext]+Update+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003?api-version=2022-02-01-preview+2": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "27" ],
+        "x-ms-client-request-id": [ "06906601-843d-470e-b094-bd84699ad914" ],
+        "CommandName": [ "New-AzContainerRegistryReplication" ],
+        "FullCommandName": [ "New-AzContainerRegistryReplication_CreateExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2020-11-01-preview, 2021-06-01-preview, 2021-08-01-preview, 2021-09-01, 2021-12-01-preview, 2022-02-01-preview, 2022-12-01" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11985" ],
+        "x-ms-request-id": [ "6e3abf05-703c-4f5f-8dd3-3a8497bce6d9" ],
+        "x-ms-correlation-request-id": [ "6e3abf05-703c-4f5f-8dd3-3a8497bce6d9" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T213053Z:6e3abf05-703c-4f5f-8dd3-3a8497bce6d9" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:30:53 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "714" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"type\":\"Microsoft.ContainerRegistry/registries/replications\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003\",\"name\":\"replication003\",\"location\":\"westus\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T21:13:51.281896+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:30:22.3319362+00:00\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"status\":{\"displayStatus\":\"Ready\",\"timestamp\":\"2023-01-16T21:14:02.1073709Z\"},\"regionEndpointEnabled\":true,\"zoneRedundancy\":\"Disabled\"}}",
+      "isContentBase64": false
+    }
+  },
+  "Update-AzContainerRegistryReplication+[NoContext]+Update+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003?api-version=2022-02-01-preview+3": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "Authorization": [ "[Filtered]" ],
+        "x-ms-unique-id": [ "28" ],
+        "x-ms-client-request-id": [ "06906601-843d-470e-b094-bd84699ad914" ],
+        "CommandName": [ "New-AzContainerRegistryReplication" ],
+        "FullCommandName": [ "New-AzContainerRegistryReplication_CreateExpanded" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2020-11-01-preview, 2021-06-01-preview, 2021-08-01-preview, 2021-09-01, 2021-12-01-preview, 2022-02-01-preview, 2022-12-01" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11984" ],
+        "x-ms-request-id": [ "480d45c8-6f7f-4d91-b3f9-a99d0032cd1d" ],
+        "x-ms-correlation-request-id": [ "480d45c8-6f7f-4d91-b3f9-a99d0032cd1d" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T213054Z:480d45c8-6f7f-4d91-b3f9-a99d0032cd1d" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:30:54 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "714" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"type\":\"Microsoft.ContainerRegistry/registries/replications\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/replications/replication003\",\"name\":\"replication003\",\"location\":\"westus\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T21:13:51.281896+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:30:22.3319362+00:00\"},\"properties\":{\"provisioningState\":\"Succeeded\",\"status\":{\"displayStatus\":\"Ready\",\"timestamp\":\"2023-01-16T21:14:02.1073709Z\"},\"regionEndpointEnabled\":true,\"zoneRedundancy\":\"Disabled\"}}",
+      "isContentBase64": false
+    }
+  }
+}

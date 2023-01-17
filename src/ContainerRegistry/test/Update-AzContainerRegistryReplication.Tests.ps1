@@ -19,8 +19,9 @@ Describe 'Update-AzContainerRegistryReplication' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'Update' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'Update' {
+        New-AzContainerRegistryReplication -RegistryName $env.rstr1 -ResourceGroupName  $env.resourceGroup -Name $env.replication3 -Location 'west us'
+        { }  | Should -Not -Throw
     }
 
     It 'UpdateViaIdentityExpanded' -skip {

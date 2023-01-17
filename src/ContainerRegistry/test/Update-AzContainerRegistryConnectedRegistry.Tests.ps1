@@ -1,11 +1,11 @@
-if(($null -eq $TestName) -or ($TestName -contains 'Remove-AzContainerRegistryPrivateEndpointConnection'))
+if(($null -eq $TestName) -or ($TestName -contains 'Update-AzContainerRegistryConnectedRegistry'))
 {
   $loadEnvPath = Join-Path $PSScriptRoot 'loadEnv.ps1'
   if (-Not (Test-Path -Path $loadEnvPath)) {
       $loadEnvPath = Join-Path $PSScriptRoot '..\loadEnv.ps1'
   }
   . ($loadEnvPath)
-  $TestRecordingFile = Join-Path $PSScriptRoot 'Remove-AzContainerRegistryPrivateEndpointConnection.Recording.json'
+  $TestRecordingFile = Join-Path $PSScriptRoot 'Update-AzContainerRegistryConnectedRegistry.Recording.json'
   $currentPath = $PSScriptRoot
   while(-not $mockingPath) {
       $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File
@@ -14,12 +14,20 @@ if(($null -eq $TestName) -or ($TestName -contains 'Remove-AzContainerRegistryPri
   . ($mockingPath | Select-Object -First 1).FullName
 }
 
-Describe 'Remove-AzContainerRegistryPrivateEndpointConnection' {
-    It 'Delete' -skip {
+Describe 'Update-AzContainerRegistryConnectedRegistry' {
+    It 'UpdateExpanded' -skip {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'DeleteViaIdentity' -skip {
+    It 'Update' -skip {
+        { throw [System.NotImplementedException] } | Should -Not -Throw
+    }
+
+    It 'UpdateViaIdentityExpanded' -skip {
+        { throw [System.NotImplementedException] } | Should -Not -Throw
+    }
+
+    It 'UpdateViaIdentity' -skip {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 }

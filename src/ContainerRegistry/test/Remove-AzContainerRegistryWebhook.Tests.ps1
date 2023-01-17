@@ -15,8 +15,8 @@ if(($null -eq $TestName) -or ($TestName -contains 'Remove-AzContainerRegistryWeb
 }
 
 Describe 'Remove-AzContainerRegistryWebhook' {
-    It 'Delete' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'Delete' {
+        {Remove-AzContainerRegistryWebhook -RegistryName $env.rstr1 -ResourceGroupName $env.resourceGroup -Name $env.webhook2} | Should -Not -Throw
     }
 
     It 'DeleteViaIdentity' -skip {

@@ -15,14 +15,16 @@ Creates a container registry with the specified parameters.
 ### CreateExpanded (Default)
 ```
 New-AzContainerRegistry -Name <String> -ResourceGroupName <String> -Location <String> -SkuName <SkuName>
- [-SubscriptionId <String>] [-AdminUserEnabled] [-DataEndpointEnabled] [-EncryptionStatus <EncryptionStatus>]
- [-ExportPolicyStatus <ExportPolicyStatus>] [-IdentityPrincipalId <String>] [-IdentityTenantId <String>]
- [-IdentityType <ResourceIdentityType>] [-IdentityUserAssignedIdentity <Hashtable>]
- [-KeyVaultPropertyIdentity <String>] [-KeyVaultPropertyKeyIdentifier <String>]
- [-NetworkRuleBypassOption <NetworkRuleBypassOptions>] [-NetworkRuleSetDefaultAction <DefaultAction>]
- [-NetworkRuleSetIPRule <IIPRule[]>] [-PublicNetworkAccess <PublicNetworkAccess>]
- [-QuarantinePolicyStatus <PolicyStatus>] [-RetentionPolicyDay <Int32>]
- [-RetentionPolicyStatus <PolicyStatus>] [-Tag <Hashtable>] [-TrustPolicyStatus <PolicyStatus>]
+ [-SubscriptionId <String>] [-AdminUserEnabled] [-AnonymousPullEnabled]
+ [-AzureAdAuthenticationAsArmPolicyStatus <AzureAdAuthenticationAsArmPolicyStatus>] [-DataEndpointEnabled]
+ [-EncryptionStatus <EncryptionStatus>] [-ExportPolicyStatus <ExportPolicyStatus>]
+ [-IdentityPrincipalId <String>] [-IdentityTenantId <String>] [-IdentityType <ResourceIdentityType>]
+ [-IdentityUserAssignedIdentity <Hashtable>] [-KeyVaultPropertyIdentity <String>]
+ [-KeyVaultPropertyKeyIdentifier <String>] [-NetworkRuleBypassOption <NetworkRuleBypassOptions>]
+ [-NetworkRuleSetDefaultAction <DefaultAction>] [-NetworkRuleSetIPRule <IIPRule[]>]
+ [-PublicNetworkAccess <PublicNetworkAccess>] [-QuarantinePolicyStatus <PolicyStatus>]
+ [-RetentionPolicyDay <Int32>] [-RetentionPolicyStatus <PolicyStatus>] [-SoftDeletePolicyRetentionDay <Int32>]
+ [-SoftDeletePolicyStatus <PolicyStatus>] [-Tag <Hashtable>] [-TrustPolicyStatus <PolicyStatus>]
  [-TrustPolicyType <TrustPolicyType>] [-ZoneRedundancy <ZoneRedundancy>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -43,14 +45,16 @@ New-AzContainerRegistry -InputObject <IContainerRegistryIdentity> -Registry <IRe
 ### CreateViaIdentityExpanded
 ```
 New-AzContainerRegistry -InputObject <IContainerRegistryIdentity> -Location <String> -SkuName <SkuName>
- [-AdminUserEnabled] [-DataEndpointEnabled] [-EncryptionStatus <EncryptionStatus>]
- [-ExportPolicyStatus <ExportPolicyStatus>] [-IdentityPrincipalId <String>] [-IdentityTenantId <String>]
- [-IdentityType <ResourceIdentityType>] [-IdentityUserAssignedIdentity <Hashtable>]
- [-KeyVaultPropertyIdentity <String>] [-KeyVaultPropertyKeyIdentifier <String>]
- [-NetworkRuleBypassOption <NetworkRuleBypassOptions>] [-NetworkRuleSetDefaultAction <DefaultAction>]
- [-NetworkRuleSetIPRule <IIPRule[]>] [-PublicNetworkAccess <PublicNetworkAccess>]
- [-QuarantinePolicyStatus <PolicyStatus>] [-RetentionPolicyDay <Int32>]
- [-RetentionPolicyStatus <PolicyStatus>] [-Tag <Hashtable>] [-TrustPolicyStatus <PolicyStatus>]
+ [-AdminUserEnabled] [-AnonymousPullEnabled]
+ [-AzureAdAuthenticationAsArmPolicyStatus <AzureAdAuthenticationAsArmPolicyStatus>] [-DataEndpointEnabled]
+ [-EncryptionStatus <EncryptionStatus>] [-ExportPolicyStatus <ExportPolicyStatus>]
+ [-IdentityPrincipalId <String>] [-IdentityTenantId <String>] [-IdentityType <ResourceIdentityType>]
+ [-IdentityUserAssignedIdentity <Hashtable>] [-KeyVaultPropertyIdentity <String>]
+ [-KeyVaultPropertyKeyIdentifier <String>] [-NetworkRuleBypassOption <NetworkRuleBypassOptions>]
+ [-NetworkRuleSetDefaultAction <DefaultAction>] [-NetworkRuleSetIPRule <IIPRule[]>]
+ [-PublicNetworkAccess <PublicNetworkAccess>] [-QuarantinePolicyStatus <PolicyStatus>]
+ [-RetentionPolicyDay <Int32>] [-RetentionPolicyStatus <PolicyStatus>] [-SoftDeletePolicyRetentionDay <Int32>]
+ [-SoftDeletePolicyStatus <PolicyStatus>] [-Tag <Hashtable>] [-TrustPolicyStatus <PolicyStatus>]
  [-TrustPolicyType <TrustPolicyType>] [-ZoneRedundancy <ZoneRedundancy>] [-DefaultProfile <PSObject>] [-AsJob]
  [-NoWait] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
@@ -99,12 +103,43 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -AnonymousPullEnabled
+Enables registry-wide pull from unauthenticated clients.
+It's in preview and available in the Standard and Premium service tiers.
+
+```yaml
+Type: System.Management.Automation.SwitchParameter
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -AsJob
 Run the command as a job
 
 ```yaml
 Type: System.Management.Automation.SwitchParameter
 Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AzureAdAuthenticationAsArmPolicyStatus
+The value that indicates whether the policy is enabled or not.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.AzureAdAuthenticationAsArmPolicyStatus
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
 Required: False
@@ -347,7 +382,7 @@ The IP ACL rules.
 To construct, see NOTES section for NETWORKRULESETIPRULE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IIPRule[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IIPRule[]
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -408,7 +443,7 @@ An object that represents a container registry.
 To construct, see NOTES section for REGISTRY properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IRegistry
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegistry
 Parameter Sets: Create, CreateViaIdentity
 Aliases:
 
@@ -420,8 +455,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
-The name is case insensitive.
+The name of the resource group to which the container registry belongs.
 
 ```yaml
 Type: System.String
@@ -481,9 +515,38 @@ Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
+### -SoftDeletePolicyRetentionDay
+The number of days after which a soft-deleted item is permanently deleted.
+
+```yaml
+Type: System.Int32
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SoftDeletePolicyStatus
+The value that indicates whether the policy is enabled or not.
+
+```yaml
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Support.PolicyStatus
+Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
 ### -SubscriptionId
-The ID of the target subscription.
-The value must be an UUID.
+The Microsoft Azure subscription ID.
 
 ```yaml
 Type: System.String
@@ -593,13 +656,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IRegistry
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegistry
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IRegistry
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegistry
 
 ## NOTES
 
@@ -612,15 +675,19 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
+  - `[ImportPipelineName <String>]`: The name of the import pipeline.
+  - `[PipelineRunName <String>]`: The name of the pipeline run.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
+  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.
@@ -642,7 +709,8 @@ To create the parameters described below, construct a hash table containing the 
   - `[Tag <IResourceTags>]`: The tags of the resource.
     - `[(Any) <String>]`: This indicates any property can be added to this object.
   - `[AdminUserEnabled <Boolean?>]`: The value that indicates whether the admin user is enabled.
-  - `[AzureAsyncOperation <String>]`: 
+  - `[AnonymousPullEnabled <Boolean?>]`: Enables registry-wide pull from unauthenticated clients. It's in preview and available in the Standard and Premium service tiers.
+  - `[AzureAdAuthenticationAsArmPolicyStatus <AzureAdAuthenticationAsArmPolicyStatus?>]`: The value that indicates whether the policy is enabled or not.
   - `[DataEndpointEnabled <Boolean?>]`: Enable a single data endpoint per region for serving data.
   - `[EncryptionStatus <EncryptionStatus?>]`: Indicates whether or not the encryption is enabled for container registry.
   - `[ExportPolicyStatus <ExportPolicyStatus?>]`: The value that indicates whether the policy is enabled or not.
@@ -662,6 +730,8 @@ To create the parameters described below, construct a hash table containing the 
   - `[QuarantinePolicyStatus <PolicyStatus?>]`: The value that indicates whether the policy is enabled or not.
   - `[RetentionPolicyDay <Int32?>]`: The number of days to retain an untagged manifest after which it gets purged.
   - `[RetentionPolicyStatus <PolicyStatus?>]`: The value that indicates whether the policy is enabled or not.
+  - `[SoftDeletePolicyRetentionDay <Int32?>]`: The number of days after which a soft-deleted item is permanently deleted.
+  - `[SoftDeletePolicyStatus <PolicyStatus?>]`: The value that indicates whether the policy is enabled or not.
   - `[TrustPolicyStatus <PolicyStatus?>]`: The value that indicates whether the policy is enabled or not.
   - `[TrustPolicyType <TrustPolicyType?>]`: The type of trust policy.
   - `[ZoneRedundancy <ZoneRedundancy?>]`: Whether or not zone redundancy is enabled for this container registry

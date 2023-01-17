@@ -1,11 +1,11 @@
-if(($null -eq $TestName) -or ($TestName -contains 'Ping-AzContainerRegistryWebhook'))
+if(($null -eq $TestName) -or ($TestName -contains 'Remove-AzContainerRegistryPipelineRun'))
 {
   $loadEnvPath = Join-Path $PSScriptRoot 'loadEnv.ps1'
   if (-Not (Test-Path -Path $loadEnvPath)) {
       $loadEnvPath = Join-Path $PSScriptRoot '..\loadEnv.ps1'
   }
   . ($loadEnvPath)
-  $TestRecordingFile = Join-Path $PSScriptRoot 'Ping-AzContainerRegistryWebhook.Recording.json'
+  $TestRecordingFile = Join-Path $PSScriptRoot 'Remove-AzContainerRegistryPipelineRun.Recording.json'
   $currentPath = $PSScriptRoot
   while(-not $mockingPath) {
       $mockingPath = Get-ChildItem -Path $currentPath -Recurse -Include 'HttpPipelineMocking.ps1' -File
@@ -14,12 +14,12 @@ if(($null -eq $TestName) -or ($TestName -contains 'Ping-AzContainerRegistryWebho
   . ($mockingPath | Select-Object -First 1).FullName
 }
 
-Describe 'Ping-AzContainerRegistryWebhook' {
-    It 'Ping' -skip {
+Describe 'Remove-AzContainerRegistryPipelineRun' {
+    It 'Delete' -skip {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'PingViaIdentity' -skip {
+    It 'DeleteViaIdentity' -skip {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 }

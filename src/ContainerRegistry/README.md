@@ -52,12 +52,87 @@ require:
   - $(this-folder)/../readme.azure.noprofile.md
 # lock the commit
 input-file:
-  - https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/stable/2022-12-01/containerregistry.json
+  - https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2022-02-01-preview/containerregistry.json
   - https://raw.githubusercontent.com/Azure/azure-rest-api-specs/main/specification/containerregistry/resource-manager/Microsoft.ContainerRegistry/preview/2019-06-01-preview/containerregistry_build.json
-module-version: 1.1.0
+module-version: 0.1.0
 title: ContainerRegistry
 subject-prefix: $(service-name)
 
 inlining-threshold: 100
 resourcegroup-append: true
 nested-object-to-string: true
+
+directive:
+- where:
+    verb: Ping
+  set: 
+    verb: Test
+- model-cmdlet:
+    - IPRule
+- where:
+    verb: Get
+    subject: RegistryCredentials
+  set:
+    subject: RegistryCredential
+- where:
+    subject: PrivateEndpointConnection
+  hide: true
+- where:
+    subject: RegistryPrivateLinkResource
+  hide: true
+- where:
+    subject: ConnectedRegistry
+  hide: true
+- where:
+    model-name: Registry
+  set:
+    format-table: 
+      properties:
+        - Name
+        - SkuName
+        - LoginServer
+        - CreationDate
+        - ProvisioningState
+        - AdminUserEnabled
+- where:
+    model-name: Replication
+  set:
+    format-table: 
+      properties:
+        - Name
+        - Location
+        - ProvisioningState
+        - Status
+        - StatusTimestamp
+- where:
+    parameter-name: ServiceUri
+  set:
+    alias: Uri
+- where:
+    parameter-name: CustomHeader
+  set:
+    alias: Header
+- where:
+    model-name: Webhook
+  set:
+    format-table: 
+      properties:
+        - Name
+        - Location
+        - Status
+        - Scope
+        - Actions
+        - ProvisioningState
+- where:
+    model-name: Event
+  set:
+    format-table: 
+      properties:
+        - ID
+        - ContentAction
+        - ContentTimestamp
+        - ResponseMessageStatusCode
+- where:
+    verb: update
+    subject: RegistryReplication 
+  hide: true

@@ -1,0 +1,86 @@
+{
+  "Get-AzContainerRegistryWebhook+[NoContext]+List+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "10" ],
+        "x-ms-client-request-id": [ "d126a1d1-7129-42e3-b325-ac7d9a959ca6" ],
+        "CommandName": [ "get-AzContainerRegistryWebhook" ],
+        "FullCommandName": [ "Get-AzContainerRegistryWebhook_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2019-12-01-preview, 2020-11-01-preview, 2021-06-01-preview, 2021-08-01-preview, 2021-09-01, 2021-12-01-preview, 2022-02-01-preview, 2022-12-01" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11992" ],
+        "x-ms-request-id": [ "d426ed4b-ea41-4fe2-b7de-4ed77b6c81ff" ],
+        "x-ms-correlation-request-id": [ "d426ed4b-ea41-4fe2-b7de-4ed77b6c81ff" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T212858Z:d426ed4b-ea41-4fe2-b7de-4ed77b6c81ff" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:28:57 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "635" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"type\":\"Microsoft.ContainerRegistry/registries/webhooks\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook001\",\"name\":\"webhook001\",\"location\":\"eastus2\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T21:03:33.2285048+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:03:33.2285048+00:00\"},\"properties\":{\"status\":\"enabled\",\"scope\":\"\",\"actions\":[\"push\",\"delete\"],\"provisioningState\":\"Succeeded\"}}]}",
+      "isContentBase64": false
+    }
+  },
+  "Get-AzContainerRegistryWebhook+[NoContext]+Get+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook001?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook001?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "11" ],
+        "x-ms-client-request-id": [ "4330f67e-131c-4cf0-a3e3-1a140a1301d8" ],
+        "CommandName": [ "get-AzContainerRegistryWebhook" ],
+        "FullCommandName": [ "Get-AzContainerRegistryWebhook_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2019-12-01-preview, 2020-11-01-preview, 2021-06-01-preview, 2021-08-01-preview, 2021-09-01, 2021-12-01-preview, 2022-02-01-preview, 2022-12-01" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11991" ],
+        "x-ms-request-id": [ "be8c64fe-81c8-4148-8f10-4e919614a468" ],
+        "x-ms-correlation-request-id": [ "be8c64fe-81c8-4148-8f10-4e919614a468" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T212858Z:be8c64fe-81c8-4148-8f10-4e919614a468" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:28:58 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "623" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"type\":\"Microsoft.ContainerRegistry/registries/webhooks\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook001\",\"name\":\"webhook001\",\"location\":\"eastus2\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T21:03:33.2285048+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:03:33.2285048+00:00\"},\"properties\":{\"status\":\"enabled\",\"scope\":\"\",\"actions\":[\"push\",\"delete\"],\"provisioningState\":\"Succeeded\"}}",
+      "isContentBase64": false
+    }
+  }
+}

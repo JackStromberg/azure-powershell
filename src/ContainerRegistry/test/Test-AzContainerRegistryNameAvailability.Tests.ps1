@@ -19,8 +19,8 @@ Describe 'Test-AzContainerRegistryNameAvailability' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'Check' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'Check' {
+        {Test-AzContainerRegistryNameAvailability -Name $env.rstr1 } | Should -Not -Throw
     }
 
     It 'CheckViaIdentityExpanded' -skip {

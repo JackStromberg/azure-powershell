@@ -1,0 +1,40 @@
+{
+  "Remove-AzContainerRegistryWebhook+[NoContext]+Delete+$DELETE+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook002?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "DELETE",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook002?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "22" ],
+        "x-ms-client-request-id": [ "c704cb8f-8afb-4378-9978-113e631a4210" ],
+        "CommandName": [ "Remove-AzContainerRegistryWebhook" ],
+        "FullCommandName": [ "Remove-AzContainerRegistryWebhook_Delete" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 204,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "x-ms-ratelimit-remaining-subscription-deletes": [ "14997" ],
+        "x-ms-request-id": [ "a9a3dc78-88e8-4abf-b148-39659ab9bcda" ],
+        "x-ms-correlation-request-id": [ "a9a3dc78-88e8-4abf-b148-39659ab9bcda" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T213014Z:a9a3dc78-88e8-4abf-b148-39659ab9bcda" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:30:14 GMT" ]
+      },
+      "ContentHeaders": {
+        "Expires": [ "-1" ]
+      },
+      "Content": null,
+      "isContentBase64": false
+    }
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "Get-AzContainerRegistry+[NoContext]+List+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.ContainerRegistry/registries?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/providers/Microsoft.ContainerRegistry/registries?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "4" ],
+        "x-ms-client-request-id": [ "c50c4be7-b3e1-4f1c-83aa-828e700b1a3a" ],
+        "CommandName": [ "Get-AzContainerRegistry" ],
+        "FullCommandName": [ "Get-AzContainerRegistry_List" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2022-02-01-preview" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11997" ],
+        "x-ms-request-id": [ "238acaf7-277d-4621-b385-6b866707e213" ],
+        "x-ms-correlation-request-id": [ "238acaf7-277d-4621-b385-6b866707e213" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T212849Z:238acaf7-277d-4621-b385-6b866707e213" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:28:49 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1495" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"sku\":{\"name\":\"Premium\",\"tier\":\"Premium\"},\"type\":\"Microsoft.ContainerRegistry/registries\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr\",\"name\":\"lnxcr\",\"location\":\"eastus2\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T20:45:50.1867404+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:27:32.3594028+00:00\"},\"properties\":{\"loginServer\":\"lnxcr.azurecr.io\",\"creationDate\":\"2023-01-16T20:45:50.1867404Z\",\"provisioningState\":\"Succeeded\",\"adminUserEnabled\":true,\"networkRuleSet\":{\"defaultAction\":\"Allow\",\"ipRules\":[{\"action\":\"Allow\",\"value\":\"192.159.0.31\"},{\"action\":\"Allow\",\"value\":\"192.158.0.31\"}]},\"policies\":{\"quarantinePolicy\":{\"status\":\"disabled\"},\"trustPolicy\":{\"type\":\"Notary\",\"status\":\"disabled\"},\"retentionPolicy\":{\"days\":7,\"lastUpdatedTime\":\"2023-01-16T20:45:51.8773465+00:00\",\"status\":\"disabled\"},\"exportPolicy\":{\"status\":\"enabled\"},\"azureADAuthenticationAsArmPolicy\":{\"status\":\"enabled\"},\"softDeletePolicy\":{\"retentionDays\":7,\"lastUpdatedTime\":\"2023-01-16T20:45:51.8773465+00:00\",\"status\":\"disabled\"}},\"encryption\":{\"status\":\"disabled\"},\"dataEndpointEnabled\":false,\"dataEndpointHostNames\":[],\"privateEndpointConnections\":[],\"publicNetworkAccess\":\"Enabled\",\"networkRuleBypassOptions\":\"AzureServices\",\"zoneRedundancy\":\"Disabled\",\"anonymousPullEnabled\":false}}]}",
+      "isContentBase64": false
+    }
+  },
+  "Get-AzContainerRegistry+[NoContext]+Get+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "5" ],
+        "x-ms-client-request-id": [ "e61d591f-d3c2-4acc-b652-63e38e3c4502" ],
+        "CommandName": [ "Get-AzContainerRegistry" ],
+        "FullCommandName": [ "Get-AzContainerRegistry_Get" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2022-02-01-preview" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11996" ],
+        "x-ms-request-id": [ "87f044be-d0e4-43bb-9b94-b5abd49fe6b5" ],
+        "x-ms-correlation-request-id": [ "87f044be-d0e4-43bb-9b94-b5abd49fe6b5" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T212850Z:87f044be-d0e4-43bb-9b94-b5abd49fe6b5" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:28:49 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1483" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"sku\":{\"name\":\"Premium\",\"tier\":\"Premium\"},\"type\":\"Microsoft.ContainerRegistry/registries\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr\",\"name\":\"lnxcr\",\"location\":\"eastus2\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T20:45:50.1867404+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:27:32.3594028+00:00\"},\"properties\":{\"loginServer\":\"lnxcr.azurecr.io\",\"creationDate\":\"2023-01-16T20:45:50.1867404Z\",\"provisioningState\":\"Succeeded\",\"adminUserEnabled\":true,\"networkRuleSet\":{\"defaultAction\":\"Allow\",\"ipRules\":[{\"action\":\"Allow\",\"value\":\"192.159.0.31\"},{\"action\":\"Allow\",\"value\":\"192.158.0.31\"}]},\"policies\":{\"quarantinePolicy\":{\"status\":\"disabled\"},\"trustPolicy\":{\"type\":\"Notary\",\"status\":\"disabled\"},\"retentionPolicy\":{\"days\":7,\"lastUpdatedTime\":\"2023-01-16T20:45:51.8773465+00:00\",\"status\":\"disabled\"},\"exportPolicy\":{\"status\":\"enabled\"},\"azureADAuthenticationAsArmPolicy\":{\"status\":\"enabled\"},\"softDeletePolicy\":{\"retentionDays\":7,\"lastUpdatedTime\":\"2023-01-16T20:45:51.8773465+00:00\",\"status\":\"disabled\"}},\"encryption\":{\"status\":\"disabled\"},\"dataEndpointEnabled\":false,\"dataEndpointHostNames\":[],\"privateEndpointConnections\":[],\"publicNetworkAccess\":\"Enabled\",\"networkRuleBypassOptions\":\"AzureServices\",\"zoneRedundancy\":\"Disabled\",\"anonymousPullEnabled\":false}}",
+      "isContentBase64": false
+    }
+  },
+  "Get-AzContainerRegistry+[NoContext]+List1+$GET+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "GET",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "6" ],
+        "x-ms-client-request-id": [ "1ad2a764-905b-45ea-b514-3726d09d3a17" ],
+        "CommandName": [ "Get-AzContainerRegistry" ],
+        "FullCommandName": [ "Get-AzContainerRegistry_List1" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2022-02-01-preview" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-reads": [ "11995" ],
+        "x-ms-request-id": [ "06d8e8d8-9f44-4d34-b2c7-fc225ce43cf2" ],
+        "x-ms-correlation-request-id": [ "06d8e8d8-9f44-4d34-b2c7-fc225ce43cf2" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T212850Z:06d8e8d8-9f44-4d34-b2c7-fc225ce43cf2" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:28:50 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "1495" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"value\":[{\"sku\":{\"name\":\"Premium\",\"tier\":\"Premium\"},\"type\":\"Microsoft.ContainerRegistry/registries\",\"id\":\"/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr\",\"name\":\"lnxcr\",\"location\":\"eastus2\",\"tags\":{},\"systemData\":{\"createdBy\":\"nanxiangliu@microsoft.com\",\"createdByType\":\"User\",\"createdAt\":\"2023-01-16T20:45:50.1867404+00:00\",\"lastModifiedBy\":\"nanxiangliu@microsoft.com\",\"lastModifiedByType\":\"User\",\"lastModifiedAt\":\"2023-01-16T21:27:32.3594028+00:00\"},\"properties\":{\"loginServer\":\"lnxcr.azurecr.io\",\"creationDate\":\"2023-01-16T20:45:50.1867404Z\",\"provisioningState\":\"Succeeded\",\"adminUserEnabled\":true,\"networkRuleSet\":{\"defaultAction\":\"Allow\",\"ipRules\":[{\"action\":\"Allow\",\"value\":\"192.159.0.31\"},{\"action\":\"Allow\",\"value\":\"192.158.0.31\"}]},\"policies\":{\"quarantinePolicy\":{\"status\":\"disabled\"},\"trustPolicy\":{\"type\":\"Notary\",\"status\":\"disabled\"},\"retentionPolicy\":{\"days\":7,\"lastUpdatedTime\":\"2023-01-16T20:45:51.8773465+00:00\",\"status\":\"disabled\"},\"exportPolicy\":{\"status\":\"enabled\"},\"azureADAuthenticationAsArmPolicy\":{\"status\":\"enabled\"},\"softDeletePolicy\":{\"retentionDays\":7,\"lastUpdatedTime\":\"2023-01-16T20:45:51.8773465+00:00\",\"status\":\"disabled\"}},\"encryption\":{\"status\":\"disabled\"},\"dataEndpointEnabled\":false,\"dataEndpointHostNames\":[],\"privateEndpointConnections\":[],\"publicNetworkAccess\":\"Enabled\",\"networkRuleBypassOptions\":\"AzureServices\",\"zoneRedundancy\":\"Disabled\",\"anonymousPullEnabled\":false}}]}",
+      "isContentBase64": false
+    }
+  }
+}

@@ -15,12 +15,12 @@ if(($null -eq $TestName) -or ($TestName -contains 'Get-AzContainerRegistryWebhoo
 }
 
 Describe 'Get-AzContainerRegistryWebhook' {
-    It 'List' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'List' {
+        {get-AzContainerRegistryWebhook -RegistryName $env.rstr1 -ResourceGroupName $env.ResourceGroup } | Should -Not -Throw
     }
 
-    It 'Get' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'Get'  {
+        {get-AzContainerRegistryWebhook -RegistryName $env.rstr1 -ResourceGroupName $env.ResourceGroup -name $env.Webhook} | Should -Not -Throw
     }
 
     It 'GetViaIdentity' -skip {

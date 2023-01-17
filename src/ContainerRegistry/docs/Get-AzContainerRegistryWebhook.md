@@ -121,8 +121,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
-The name is case insensitive.
+The name of the resource group to which the container registry belongs.
 
 ```yaml
 Type: System.String
@@ -137,8 +136,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The ID of the target subscription.
-The value must be an UUID.
+The Microsoft Azure subscription ID.
 
 ```yaml
 Type: System.String[]
@@ -161,7 +159,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IWebhook
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IWebhook
 
 ## NOTES
 
@@ -174,15 +172,19 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
+  - `[ImportPipelineName <String>]`: The name of the import pipeline.
+  - `[PipelineRunName <String>]`: The name of the pipeline run.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
+  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.

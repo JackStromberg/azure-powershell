@@ -15,7 +15,7 @@ if(($null -eq $TestName) -or ($TestName -contains 'Get-AzContainerRegistryWebhoo
 }
 
 Describe 'Get-AzContainerRegistryWebhookEvent' {
-    It 'List' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'List' {
+        { Get-AzContainerRegistryWebhookEvent -RegistryName $env.rstr1 -ResourceGroupName $env.ResourceGroup -WebhookName $env.Webhook} | Should -Not -Throw
     }
 }

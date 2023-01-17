@@ -1,11 +1,11 @@
 ---
 external help file:
 Module Name: Az.ContainerRegistry
-online version: https://learn.microsoft.com/powershell/module/az.containerregistry/get-azcontainerregistrycredentials
+online version: https://learn.microsoft.com/powershell/module/az.containerregistry/get-azcontainerregistrycredential
 schema: 2.0.0
 ---
 
-# Get-AzContainerRegistryCredentials
+# Get-AzContainerRegistryCredential
 
 ## SYNOPSIS
 Lists the login credentials for the specified container registry.
@@ -13,7 +13,7 @@ Lists the login credentials for the specified container registry.
 ## SYNTAX
 
 ```
-Get-AzContainerRegistryCredentials -RegistryName <String> -ResourceGroupName <String>
+Get-AzContainerRegistryCredential -RegistryName <String> -ResourceGroupName <String>
  [-SubscriptionId <String[]>] [-DefaultProfile <PSObject>] [-Confirm] [-WhatIf] [<CommonParameters>]
 ```
 
@@ -77,8 +77,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
-The name is case insensitive.
+The name of the resource group to which the container registry belongs.
 
 ```yaml
 Type: System.String
@@ -93,8 +92,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The ID of the target subscription.
-The value must be an UUID.
+The Microsoft Azure subscription ID.
 
 ```yaml
 Type: System.String[]
@@ -146,7 +144,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IRegistryListCredentialsResult
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IRegistryListCredentialsResult
 
 ## NOTES
 

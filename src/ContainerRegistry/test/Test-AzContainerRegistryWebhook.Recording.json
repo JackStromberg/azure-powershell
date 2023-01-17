@@ -1,0 +1,44 @@
+{
+  "Test-AzContainerRegistryWebhook+[NoContext]+Ping+$POST+https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook001/ping?api-version=2022-02-01-preview+1": {
+    "Request": {
+      "Method": "POST",
+      "RequestUri": "https://management.azure.com/subscriptions/9e223dbe-3399-4e19-88eb-0975f02ac87f/resourceGroups/lnxtest/providers/Microsoft.ContainerRegistry/registries/lnxcr/webhooks/webhook001/ping?api-version=2022-02-01-preview",
+      "Content": null,
+      "isContentBase64": false,
+      "Headers": {
+        "x-ms-unique-id": [ "24" ],
+        "x-ms-client-request-id": [ "d2de563b-b9a7-4e75-b7ed-4da64619d392" ],
+        "CommandName": [ "Test-AzContainerRegistryWebhook" ],
+        "FullCommandName": [ "Test-AzContainerRegistryWebhook_Ping" ],
+        "ParameterSetName": [ "__AllParameterSets" ],
+        "User-Agent": [ "AzurePowershell/v0.0.0", "PSVersion/v7.2.8", "Az.ContainerRegistry/0.1.0" ],
+        "Authorization": [ "[Filtered]" ]
+      },
+      "ContentHeaders": {
+      }
+    },
+    "Response": {
+      "StatusCode": 200,
+      "Headers": {
+        "Cache-Control": [ "no-cache" ],
+        "Pragma": [ "no-cache" ],
+        "api-supported-versions": [ "2019-12-01-preview, 2020-11-01-preview, 2021-06-01-preview, 2021-08-01-preview, 2021-09-01, 2021-12-01-preview, 2022-02-01-preview, 2022-12-01" ],
+        "Strict-Transport-Security": [ "max-age=31536000; includeSubDomains" ],
+        "Server": [ "Microsoft-HTTPAPI/2.0" ],
+        "x-ms-ratelimit-remaining-subscription-writes": [ "1196" ],
+        "x-ms-request-id": [ "043bf3e4-e5e8-4a1b-994d-09abf75d850a" ],
+        "x-ms-correlation-request-id": [ "043bf3e4-e5e8-4a1b-994d-09abf75d850a" ],
+        "x-ms-routing-request-id": [ "SOUTHEASTASIA:20230116T213018Z:043bf3e4-e5e8-4a1b-994d-09abf75d850a" ],
+        "X-Content-Type-Options": [ "nosniff" ],
+        "Date": [ "Mon, 16 Jan 2023 21:30:17 GMT" ]
+      },
+      "ContentHeaders": {
+        "Content-Length": [ "45" ],
+        "Content-Type": [ "application/json; charset=utf-8" ],
+        "Expires": [ "-1" ]
+      },
+      "Content": "{\"id\":\"043bf3e4-e5e8-4a1b-994d-09abf75d850a\"}",
+      "isContentBase64": false
+    }
+  }
+}

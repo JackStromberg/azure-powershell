@@ -20,7 +20,7 @@ Describe 'New-AzContainerRegistry' {
     }
 
     It 'Create' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+        { New-AzContainerRegistry -RegistryName $env.rstr2 -sku 'Basic' -ResourceGroupName $env.ResourceGroup} | Should -Not -Throw
     }
 
     It 'CreateViaIdentityExpanded' -skip {

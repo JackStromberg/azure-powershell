@@ -20,7 +20,8 @@ Describe 'New-AzContainerRegistryWebhook' {
     }
 
     It 'Create' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+        {New-AzContainerRegistryWebhook -RegistryName $env.rstr1 -ResourceGroupName $env.resourceGroup -Name "webhook002" -ServiceUri http://www.bing.com -Action Delete,Push -Location "east us" -Status Enabled -Scope "foo:*"
+ } | Should -Not -Throw
     }
 
     It 'CreateViaIdentityExpanded' -skip {

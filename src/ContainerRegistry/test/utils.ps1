@@ -19,6 +19,31 @@ function setupEnv() {
     $env.SubscriptionId = (Get-AzContext).Subscription.Id
     $env.Tenant = (Get-AzContext).Tenant.Id
     # For any resources you created for test, you should add it to $env here.
+    # Generate some random strings for use in the test.
+    $rstr1 = "lnxcr"
+    $rstr2 = RandomString -allChars $false -len 6
+    $rstr3 = RandomString -allChars $false -len 6
+    $rstr4 = RandomString -allChars $false -len 6
+    $rstr5 = RandomString -allChars $false -len 6
+    $rstr6 = RandomString -allChars $false -len 6
+    $rstr7 = RandomString -allChars $false -len 6
+    $rstr8 = RandomString -allChars $false -len 6
+    $webhook = "webhook001"
+    $replication = "replication001"
+    $null = $env.Add("rstr1", $rstr1)
+    $null = $env.Add("rstr2", $rstr2)
+    $null = $env.Add("rstr3", $rstr3)
+    $null = $env.Add("webhook", "webhook001")
+    $null = $env.Add("replication", "replication001")
+    $null = $env.Add("webhook2", "webhook002")
+    $null = $env.Add("replication2", "replication002")
+    $null = $env.Add("webhook3", "webhook003")
+    $null = $env.Add("replication3", "replication003")
+    # Create the test group
+    write-host "start to create test group"
+    $resourceGroup = "lnxtest"
+    $null = $env.Add("resourceGroup", $resourceGroup)
+    New-AzContainerRegistryReplication -RegistryName $rstr1 -ResourceGroupName  $resourceGroup -Name $replication -Location 'east us'
     $envFile = 'env.json'
     if ($TestMode -eq 'live') {
         $envFile = 'localEnv.json'
@@ -27,5 +52,6 @@ function setupEnv() {
 }
 function cleanupEnv() {
     # Clean resources you create for testing
+    # Removing resourcegroup will clean all the resources created for testing.
 }
 

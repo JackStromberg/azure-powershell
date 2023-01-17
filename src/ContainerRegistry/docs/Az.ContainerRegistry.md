@@ -23,14 +23,17 @@ Gets the count of queued runs for a given agent pool.
 ### [Get-AzContainerRegistryBuildSourceUploadUrl](Get-AzContainerRegistryBuildSourceUploadUrl.md)
 Get the upload location for the user to be able to upload the source.
 
-### [Get-AzContainerRegistryCredentials](Get-AzContainerRegistryCredentials.md)
+### [Get-AzContainerRegistryCredential](Get-AzContainerRegistryCredential.md)
 Lists the login credentials for the specified container registry.
 
-### [Get-AzContainerRegistryPrivateEndpointConnection](Get-AzContainerRegistryPrivateEndpointConnection.md)
-Get the specified private endpoint connection associated with the container registry.
+### [Get-AzContainerRegistryExportPipeline](Get-AzContainerRegistryExportPipeline.md)
+Gets the properties of the export pipeline.
 
-### [Get-AzContainerRegistryPrivateLinkResource](Get-AzContainerRegistryPrivateLinkResource.md)
-Gets a private link resource by a specified group name for a container registry.
+### [Get-AzContainerRegistryImportPipeline](Get-AzContainerRegistryImportPipeline.md)
+Gets the properties of the import pipeline.
+
+### [Get-AzContainerRegistryPipelineRun](Get-AzContainerRegistryPipelineRun.md)
+Gets the detailed information for a given pipeline run.
 
 ### [Get-AzContainerRegistryReplication](Get-AzContainerRegistryReplication.md)
 Gets the properties of the specified replication.
@@ -74,6 +77,9 @@ Lists recent events for the specified webhook.
 ### [Import-AzContainerRegistryImage](Import-AzContainerRegistryImage.md)
 Copies an image to this container registry from the specified container registry.
 
+### [Invoke-AzContainerRegistryDeactivateConnectedRegistry](Invoke-AzContainerRegistryDeactivateConnectedRegistry.md)
+Deactivates the connected registry instance.
+
 ### [Invoke-AzContainerRegistryScheduleRegistryRun](Invoke-AzContainerRegistryScheduleRegistryRun.md)
 Schedules a new run based on the request parameters and add it to the run queue.
 
@@ -89,8 +95,20 @@ Regenerates one of the login credentials for the specified container registry.
 ### [New-AzContainerRegistryCredentials](New-AzContainerRegistryCredentials.md)
 Generate keys for a token of a specified container registry.
 
-### [New-AzContainerRegistryPrivateEndpointConnection](New-AzContainerRegistryPrivateEndpointConnection.md)
-Update the state of specified private endpoint connection associated with the container registry.
+### [New-AzContainerRegistryExportPipeline](New-AzContainerRegistryExportPipeline.md)
+Creates an export pipeline for a container registry with the specified parameters.
+
+### [New-AzContainerRegistryImportPipeline](New-AzContainerRegistryImportPipeline.md)
+Creates an import pipeline for a container registry with the specified parameters.
+
+### [New-AzContainerRegistryIPRuleObject](New-AzContainerRegistryIPRuleObject.md)
+Create an in-memory object for IPRule.
+
+### [New-AzContainerRegistryNetworkRuleSetObject](New-AzContainerRegistryNetworkRuleSetObject.md)
+Create an in-memory object for NetworkRuleSet.
+
+### [New-AzContainerRegistryPipelineRun](New-AzContainerRegistryPipelineRun.md)
+Creates a pipeline run for a container registry with the specified parameters
 
 ### [New-AzContainerRegistryReplication](New-AzContainerRegistryReplication.md)
 Creates a replication for a container registry with the specified parameters.
@@ -110,17 +128,20 @@ Creates a token for a container registry with the specified parameters.
 ### [New-AzContainerRegistryWebhook](New-AzContainerRegistryWebhook.md)
 Creates a webhook for a container registry with the specified parameters.
 
-### [Ping-AzContainerRegistryWebhook](Ping-AzContainerRegistryWebhook.md)
-Triggers a ping event to be sent to the webhook.
-
 ### [Remove-AzContainerRegistry](Remove-AzContainerRegistry.md)
 Deletes a container registry.
 
 ### [Remove-AzContainerRegistryAgentPool](Remove-AzContainerRegistryAgentPool.md)
 Deletes a specified agent pool resource.
 
-### [Remove-AzContainerRegistryPrivateEndpointConnection](Remove-AzContainerRegistryPrivateEndpointConnection.md)
-Deletes the specified private endpoint connection associated with the container registry.
+### [Remove-AzContainerRegistryExportPipeline](Remove-AzContainerRegistryExportPipeline.md)
+Deletes an export pipeline from a container registry.
+
+### [Remove-AzContainerRegistryImportPipeline](Remove-AzContainerRegistryImportPipeline.md)
+Deletes an import pipeline from a container registry.
+
+### [Remove-AzContainerRegistryPipelineRun](Remove-AzContainerRegistryPipelineRun.md)
+Deletes a pipeline run from a container registry.
 
 ### [Remove-AzContainerRegistryReplication](Remove-AzContainerRegistryReplication.md)
 Deletes a replication from a container registry.
@@ -140,15 +161,15 @@ Deletes a token from a container registry.
 ### [Remove-AzContainerRegistryWebhook](Remove-AzContainerRegistryWebhook.md)
 Deletes a webhook from a container registry.
 
-### [Set-AzContainerRegistryPrivateEndpointConnection](Set-AzContainerRegistryPrivateEndpointConnection.md)
-Update the state of specified private endpoint connection associated with the container registry.
-
 ### [Stop-AzContainerRegistryRun](Stop-AzContainerRegistryRun.md)
 Cancel an existing run.
 
 ### [Test-AzContainerRegistryNameAvailability](Test-AzContainerRegistryNameAvailability.md)
 Checks whether the container registry name is available for use.
 The name must contain only alphanumeric characters, be globally unique, and between 5 and 50 characters in length.
+
+### [Test-AzContainerRegistryWebhook](Test-AzContainerRegistryWebhook.md)
+Triggers a ping event to be sent to the webhook.
 
 ### [Update-AzContainerRegistry](Update-AzContainerRegistry.md)
 Updates a container registry with the specified parameters.

@@ -19,8 +19,8 @@ Describe 'New-AzContainerRegistryCredential' {
         { throw [System.NotImplementedException] } | Should -Not -Throw
     }
 
-    It 'Regenerate' -skip {
-        { throw [System.NotImplementedException] } | Should -Not -Throw
+    It 'Regenerate' {
+        { New-AzContainerRegistryCredential  -RegistryName $env.rstr1 -ResourceGroupName $env.ResourceGroup -Name Password} | Should -Not -Throw
     }
 
     It 'RegenerateViaIdentityExpanded' -skip {

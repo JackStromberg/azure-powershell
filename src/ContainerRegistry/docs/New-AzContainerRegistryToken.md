@@ -90,7 +90,7 @@ Accept wildcard characters: False
 To construct, see NOTES section for CREDENTIALSCERTIFICATE properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.ITokenCertificate[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.ITokenCertificate[]
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -106,7 +106,7 @@ Accept wildcard characters: False
 To construct, see NOTES section for CREDENTIALSPASSWORD properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.ITokenPassword[]
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.ITokenPassword[]
 Parameter Sets: CreateExpanded, CreateViaIdentityExpanded
 Aliases:
 
@@ -194,8 +194,7 @@ Accept wildcard characters: False
 ```
 
 ### -ResourceGroupName
-The name of the resource group.
-The name is case insensitive.
+The name of the resource group to which the container registry belongs.
 
 ```yaml
 Type: System.String
@@ -240,8 +239,7 @@ Accept wildcard characters: False
 ```
 
 ### -SubscriptionId
-The ID of the target subscription.
-The value must be an UUID.
+The Microsoft Azure subscription ID.
 
 ```yaml
 Type: System.String
@@ -260,7 +258,7 @@ An object that represents a token for a container registry.
 To construct, see NOTES section for TOKENCREATEPARAMETER properties and create a hash table.
 
 ```yaml
-Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IToken
+Type: Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IToken
 Parameter Sets: Create, CreateViaIdentity
 Aliases:
 
@@ -307,13 +305,13 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 
 ## INPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IToken
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IToken
 
 ### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.IContainerRegistryIdentity
 
 ## OUTPUTS
 
-### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20221201.IToken
+### Microsoft.Azure.PowerShell.Cmdlets.ContainerRegistry.Models.Api20220201Preview.IToken
 
 ## NOTES
 
@@ -337,15 +335,19 @@ To create the parameters described below, construct a hash table containing the 
 
 `INPUTOBJECT <IContainerRegistryIdentity>`: Identity Parameter
   - `[AgentPoolName <String>]`: The name of the agent pool.
+  - `[ConnectedRegistryName <String>]`: The name of the connected registry.
+  - `[ExportPipelineName <String>]`: The name of the export pipeline.
   - `[GroupName <String>]`: The name of the private link resource.
   - `[Id <String>]`: Resource identity path
+  - `[ImportPipelineName <String>]`: The name of the import pipeline.
+  - `[PipelineRunName <String>]`: The name of the pipeline run.
   - `[PrivateEndpointConnectionName <String>]`: The name of the private endpoint connection.
   - `[RegistryName <String>]`: The name of the container registry.
   - `[ReplicationName <String>]`: The name of the replication.
-  - `[ResourceGroupName <String>]`: The name of the resource group. The name is case insensitive.
+  - `[ResourceGroupName <String>]`: The name of the resource group to which the container registry belongs.
   - `[RunId <String>]`: The run ID.
   - `[ScopeMapName <String>]`: The name of the scope map.
-  - `[SubscriptionId <String>]`: The ID of the target subscription. The value must be an UUID.
+  - `[SubscriptionId <String>]`: The Microsoft Azure subscription ID.
   - `[TaskName <String>]`: The name of the container registry task.
   - `[TaskRunName <String>]`: The name of the task run.
   - `[TokenName <String>]`: The name of the token.
@@ -358,7 +360,6 @@ To create the parameters described below, construct a hash table containing the 
   - `[SystemDataLastModifiedAt <DateTime?>]`: The timestamp of resource modification (UTC).
   - `[SystemDataLastModifiedBy <String>]`: The identity that last modified the resource.
   - `[SystemDataLastModifiedByType <LastModifiedByType?>]`: The type of identity that last modified the resource.
-  - `[AzureAsyncOperation <String>]`: 
   - `[CredentialsCertificate <ITokenCertificate[]>]`: 
     - `[EncodedPemCertificate <String>]`: Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
     - `[Expiry <DateTime?>]`: The expiry datetime of the certificate.
