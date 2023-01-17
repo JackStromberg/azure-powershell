@@ -1,22 +1,12 @@
-### Example 1: {{ Add title here }}
+### Example 1: Get the login credentials for a container registry
 ```powershell
-{{ Add code here }}
+Get-AzContainerRegistryCredential -ResourceGroupName "MyResourceGroup" -Name "MyRegistry"
 ```
 
 ```output
-{{ Add output here }}
+Username   Password                         Password2
+--------   --------                         ---------
+MyRegistry +Y+==B==KdT=YV=ZgH=p/zQ/e1sNQq/d //JRPkgxx+r+z/ztU=R//E==vum=pRKL
 ```
 
-{{ Add description here }}
-
-### Example 2: {{ Add title here }}
-```powershell
-{{ Add code here }}
-```
-
-```output
-{{ Add output here }}
-```
-
-{{ Add description here }}
-
+This command gets the login credentials for the specified container registry. Admin user has to be enabled for the container registry `MyRegistry` to get login credentials.

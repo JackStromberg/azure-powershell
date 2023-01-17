@@ -104,9 +104,6 @@ Creates an import pipeline for a container registry with the specified parameter
 ### [New-AzContainerRegistryIPRuleObject](New-AzContainerRegistryIPRuleObject.md)
 Create an in-memory object for IPRule.
 
-### [New-AzContainerRegistryNetworkRuleSetObject](New-AzContainerRegistryNetworkRuleSetObject.md)
-Create an in-memory object for NetworkRuleSet.
-
 ### [New-AzContainerRegistryPipelineRun](New-AzContainerRegistryPipelineRun.md)
 Creates a pipeline run for a container registry with the specified parameters
 
